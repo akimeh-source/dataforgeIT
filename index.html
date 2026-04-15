@@ -13,12 +13,12 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --bg:       #070706;
-      --bg2:      #0d0c0b;
-      --bg3:      #131210;
-      --bg4:      #181614;
-      --border:   rgba(255,255,255,0.055);
-      --border2:  rgba(212,168,67,0.18);
+      --bg:       #09090a;
+      --bg2:      #111218;
+      --bg3:      #191b24;
+      --bg4:      #20222e;
+      --border:   rgba(255,255,255,0.07);
+      --border2:  rgba(212,168,67,0.25);
       --gold:     #d4a843;
       --gold-d:   #b8902e;
       --gold-l:   #e8c060;
@@ -26,9 +26,9 @@
       --green:    #4e8a62;
       --red:      #c0544a;
       --text:     #f0ece0;
-      --warm:     #c8bfa8;
-      --muted:    #7a7060;
-      --faint:    #3a352c;
+      --warm:     #c4bdb0;
+      --muted:    #7a7468;
+      --faint:    #3a3830;
     }
 
     html { scroll-behavior: smooth; }
@@ -206,8 +206,7 @@
 
     /* ─── HERO ─── */
     .hero {
-      min-height: 100vh;
-      padding: 120px 40px 80px;
+      padding: 120px 40px 96px;
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 60px;
@@ -594,8 +593,8 @@
 
     /* ─── STATS BAR ─── */
     .stats-bar {
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
+      border-top: 1px solid var(--border2);
+      border-bottom: 1px solid var(--border2);
       background: var(--bg2);
       padding: 0 40px;
     }
@@ -609,7 +608,7 @@
       .stats-inner { grid-template-columns: repeat(2, 1fr); }
     }
     .stat-item {
-      padding: 32px 24px;
+      padding: 36px 24px;
       display: flex;
       flex-direction: column;
       gap: 6px;
@@ -638,16 +637,16 @@
 
     /* ─── SHARED SECTION ─── */
     .section {
-      padding: 96px 40px;
+      padding: 72px 40px;
       max-width: 1180px;
       margin: 0 auto;
     }
-    @media (max-width: 768px) { .section { padding: 64px 24px; } }
+    @media (max-width: 768px) { .section { padding: 52px 24px; } }
 
     .section-full {
-      padding: 96px 40px;
+      padding: 72px 40px;
     }
-    @media (max-width: 768px) { .section-full { padding: 64px 24px; } }
+    @media (max-width: 768px) { .section-full { padding: 52px 24px; } }
 
     .section-label {
       display: inline-flex;
@@ -690,7 +689,7 @@
       color: var(--warm);
       line-height: 1.8;
       max-width: 520px;
-      margin-bottom: 56px;
+      margin-bottom: 40px;
     }
 
     /* ─── PROBLEM SECTION ─── */
@@ -700,8 +699,8 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 1px;
-      background: var(--border);
-      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.08);
       border-radius: 16px;
       overflow: hidden;
     }
@@ -712,9 +711,9 @@
     .pain-card {
       background: var(--bg2);
       padding: 36px 32px;
-      transition: background 0.3s;
+      transition: background 0.3s, box-shadow 0.3s;
     }
-    .pain-card:hover { background: var(--bg3); }
+    .pain-card:hover { background: var(--bg3); box-shadow: inset 0 0 0 1px var(--border2); }
 
     .pain-emoji {
       font-size: 28px;
@@ -877,9 +876,9 @@
     /* ─── OFFER BANNER ─── */
     .offer-wrap {
       background: var(--bg);
-      padding: 0 40px 96px;
+      padding: 0 40px 72px;
     }
-    @media (max-width: 768px) { .offer-wrap { padding: 0 24px 64px; } }
+    @media (max-width: 768px) { .offer-wrap { padding: 0 24px 52px; } }
     .offer-inner { max-width: 1180px; margin: 0 auto; }
 
     .offer-banner {
